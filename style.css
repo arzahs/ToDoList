@@ -33,8 +33,11 @@ li label{
 	cursor: pointer;
 	width: 20px;
 	height: 20px;
-	background: black;
+	background: url("destroy.png");
 	border-radius: 50%;
+}
+.destroy:hover{
+	background-position: 0 -20px;
 }
 li:hover .destroy {
   	display: block;
