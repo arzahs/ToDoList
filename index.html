@@ -7,10 +7,11 @@
 	 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1 class="wrapper">ToDoList</h1>
+
 	<div class="container">
 		<div class="row">
    <div class="col-md-8 col-md-offset-2">
+   <div class="wrapper"><h1>ToDoList</h1></div>
     <div class="panel panel-default">
         <div class="panel-heading">
         	<div class="input-group">
@@ -20,15 +21,19 @@
       <input type="text" class="form-control" placeholder="Search for...">
     </div><!-- /input-group -->
   </div>
-     
-         <div class="panel-body">
-		<div class="form-group">
-		<input type="checkbox"> <b>olololol</b>
-		</div>
-		<div class="form-group">
-		<input type="checkbox"> olololol
-		</div>
-		</div>
+      <div class="panel-body">
+		<ul>
+			<li><input type="checkbox"><label for="checkbox">Test</label>
+			<div class="destroy"></div>
+			</li>
+			<li><input type="checkbox"><label for="checkbox">Test</label>
+			<div class="destroy"></div>
+			</li>
+			<li class="done"><input type="checkbox"><label for="checkbox">Test</label>
+			<div class="destroy"></div>
+			</li>
+		</ul>
+	</div>
 	</div>
   	</div>
   	</div>
