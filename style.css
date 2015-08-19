@@ -2,27 +2,53 @@ body{
 	background: #eee;
 }
 .wrapper{
-	width: 20%;
-	margin: 20 auto;
 	text-align: center;
 	
 }
 
+
 ul{
 	list-style: none;
 }
-
+li{
+	display: block;
+	position:relative;
+	padding: 10px 10px;
+}
+li:hover{
+	padding-bottom: 9px;
+	border-bottom: 1px solid green;
+}
+li label{
+	padding-left: 10px;
+	
+	font-size: 17px;
+	line-height: 1;
+}
 .destroy {
 	position: absolute;
 	right: 5px;
-	top: 20px;
+	top: 10px;
 	display: none;
 	cursor: pointer;
 	width: 20px;
 	height: 20px;
 	background: black;
+	border-radius: 50%;
 }
 li:hover .destroy {
   	display: block;
+}
+input[type="checkbox"]{
+width:17px;
+height: 17px;
+margin:0;
+position: absolute;
+left: -2px;
+	
+}
+.text-done{
+	color:#eee;
+	text-decoration: line-through;
 }
 
