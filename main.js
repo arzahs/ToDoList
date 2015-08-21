@@ -35,6 +35,7 @@ function addPost(){
 		if(bisiness !== ''){
 		countPost=localStorage.length;
 		localStorage.setItem(countPost , bisiness);
+		$('#bisiness').val('');
 		outList();
 		
 }
@@ -45,7 +46,6 @@ function outList(){
 	$(this).children().remove(); });
 	if(localStorage.length>0){
     for(var i=0; i<localStorage.length; i++){
-	//$('#bisiness').val('');
 	if(localStorage.getItem(i)!== null){
 		$('#todo').append(
 			$('<li>').attr('data-itm', i).append(
