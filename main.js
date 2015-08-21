@@ -43,14 +43,17 @@ function addPost(){
 function outList(){
 	$('ul').each(function(){
 	$(this).children().remove(); });
-
+	if(localStorage.length>0){
     for(var i=0; i<localStorage.length; i++){
 	//$('#bisiness').val('');
+	if(localStorage.getItem(i)!== null){
 		$('#todo').append(
-			$('<li>').attr('data-itm', i+1).append(
+			$('<li>').attr('data-itm', i).append(
 				$('<input>').attr('type','checkbox')).append(
-					$('<label>').attr('contenteditable','true').text(localStorage.getItem(i+1))).append(
+					$('<label>').attr('contenteditable','true').text(localStorage.getItem(i))).append(
 					$('<div>').attr('class','destroy'))
 					);
+	}}
 	}
 }
+
