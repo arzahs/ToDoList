@@ -13,6 +13,7 @@ window.addEventListener("load", function () {
 	var list = document.querySelector('ul');
 	var input = document.querySelector('input');
 	
+
 	update();
 	
 	function update () {
@@ -28,14 +29,29 @@ window.addEventListener("load", function () {
 			li.appendChild(checkbox);
 			li.appendChild(el);
 			li.appendChild(div);
+			li.id = i;
 			list.appendChild(li);
 		} 
 	}
 	
+	list.addEventListener('click', function (e) {
+		if(e.target.classList.contains('destroy')){
+			var parent = e.target.parentNode;
+			var iter = parent.id;
+			list.removeChild(parent);
+			state.items.splice(iter, 1);
+			localStorage.setItem('data', JSON.stringify(state));
+		}
+
+
+
+	});
+
 	button.addEventListener('click', function () {
 		var l = input.value;
 		state.items.push(l);
 		update();
 		localStorage.setItem('data', JSON.stringify(state));
+		input.value = '';
 	}); 
 }); 
