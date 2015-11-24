@@ -1,0 +1,61 @@
+body{
+	background: #eee;
+}
+.wrapper{
+	text-align: center;
+	
+}
+
+
+ul{
+	list-style: none;
+}
+li{
+	display: block;
+	position:relative;
+	padding: 10px 10px;
+}
+li:hover{
+	padding-bottom: 9px;
+	border-bottom: 1px solid green;
+}
+li label{
+	padding-left: 10px;
+	
+	font-size: 17px;
+	line-height: 1;
+}
+.destroy {
+	position: absolute;
+	right: 5px;
+	top: 10px;
+	display: none;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	background: url("destroy.png");
+	border-radius: 50%;
+}
+.destroy:hover{
+	background-position: 0 -20px;
+}
+li:hover .destroy {
+  	display: block;
+}
+input[type="checkbox"]{
+width:17px;
+height: 17px;
+margin:0;
+position: absolute;
+left: -2px;
+	
+}
+.text-done{
+	color:#eee;
+	text-decoration: line-through;
+}
+
+.footer{
+	text-align: center;
+}
+
